@@ -1,0 +1,13 @@
+{
+  "name": "gerador-storyboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gera o modelo de storyboard para Word (.docx e .dotx)",
+  "scripts": {
+    "gerar": "python3 gerar_molduras.py img && node gerar_modelo.js img ../Modelo_Storyboard_Video"
+  },
+  "dependencies": {
+    "docx": "^9.8.1",
+    "jszip": "^3.10.2"
+  }
+}
