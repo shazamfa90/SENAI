@@ -12,6 +12,8 @@ contaminação no ambiente escolar: água, solo, alimentos, mãos e ar.
 |---|---|
 | `Contaminacao_nas_Escolas_Iniciacao_Cientifica.docx` | Trabalho escrito, editável no Word, nas normas da ABNT |
 | `Contaminacao_nas_Escolas_Iniciacao_Cientifica.pdf` | Mesma versão, pronta para imprimir ou enviar |
+| `Contaminacao_nas_Escolas_Slides.html` | Slides animados em um único arquivo; abre em qualquer navegador, sem internet (setas ou clique para avançar, F para tela cheia) |
+| `slides-fonte/` | Fontes, foto e código de cada slide; `python3 scripts/gerar_slides_html.py` remonta o HTML |
 | `figuras/` | Gráficos, esquema, foto e códigos QR usados no trabalho |
 | `scripts/` | Código que gera as figuras e monta o documento |
 
