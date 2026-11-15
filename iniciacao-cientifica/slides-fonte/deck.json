@@ -1,0 +1,34 @@
+{
+  "v": 5,
+  "createdOnFiles": { "v": 1, "at": "2026-11-14T21:45:00Z" },
+  "lists": "css",
+  "format": { "v": 1, "shared": ["project/deck.css"] },
+  "title": "Contaminação nas Escolas",
+  "order": [
+    "capa", "luz", "pergunta", "metodo", "vias",
+    "agua", "areia", "merenda", "maos", "ar",
+    "sintese", "comum", "propostas", "quiz", "fim", "referencias"
+  ],
+  "sections": {
+    "abertura": { "description": "De onde veio a pergunta e o que o grupo quis descobrir.", "start": "capa" },
+    "metodo": { "description": "Como a pesquisa bibliográfica foi feita e quais são as cinco vias de contaminação.", "start": "metodo" },
+    "fichas": { "description": "O dado principal de cada uma das cinco fichas de estudo.", "start": "agua" },
+    "discussao": { "description": "O que os cinco estudos têm em comum e o que a escola pode fazer.", "start": "sintese" },
+    "fechamento": { "description": "Quiz com a turma, considerações finais e referências.", "start": "quiz" }
+  },
+  "faces": {
+    "fraunces": {
+      "family": "Fraunces",
+      "href": "https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400..900;1,400..900&display=swap"
+    },
+    "karla": {
+      "family": "Karla",
+      "href": "https://fonts.googleapis.com/css2?family=Karla:wght@400..800&display=swap"
+    },
+    "caveat": {
+      "family": "Caveat",
+      "href": "https://fonts.googleapis.com/css2?family=Caveat:wght@500..700&display=swap"
+    }
+  },
+  "designSystems": []
+}

@@ -1,0 +1,221 @@
+/* Direção: caderno de pesquisa de aluno. Folha creme de fichário, abas
+   coloridas por via, caneta azul e vermelha para anotações, marca-texto
+   amarelo. Só dois slides apagam a luz (a "luz negra" do estudo das mãos). */
+
+body {
+  font-family: 'Karla', Arial, sans-serif;
+  color: #1E1B16;
+}
+
+section {
+  counter-increment: page;
+  padding: 128px 128px 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.folha { background: #F7F3E8; color: #1E1B16; }
+.escuro { background: #111417; color: #EDEFE6; }
+.grifo { background: #FFE066; color: #1E1B16; }
+
+/* Tipos: Fraunces (títulos), Karla (texto), Caveat (anotações à mão) */
+h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -3px;
+}
+h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 68px;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -1px;
+}
+h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+p { font-size: 36px; line-height: 1.36; font-weight: 500; }
+
+.mao {
+  font-family: 'Caveat', 'Brush Script MT', cursive;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.12;
+}
+.mao-g {
+  font-family: 'Caveat', 'Brush Script MT', cursive;
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+.azul { color: #27469A; }
+.vermelho { color: #C8321E; }
+.brilho { color: #D8F04A; }
+.folha .fraco { color: #4A4439; }
+.escuro .fraco { color: #BCC3CE; }
+.grifo .fraco { color: #3A3528; }
+.t28 { font-size: 30px; line-height: 1.36; }
+.forte { font-weight: 700; }
+
+/* Estrutura */
+.topo { display: flex; flex-direction: column; gap: 14px; }
+.corpo { flex: 1; display: flex; gap: 96px; padding-top: 52px; }
+.col { flex: 1; display: flex; flex-direction: column; }
+.pilha { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding-top: 52px; }
+.meio { justify-content: center; }
+.espaco { flex: 1; }
+.g20 { gap: 20px; }
+.g36 { gap: 36px; }
+.largo { width: 1500px; }
+.estreita { width: 1080px; }
+.entre { justify-content: space-between; }
+.par { display: flex; gap: 96px; align-items: flex-start; }
+.par p { flex: 1; }
+
+/* Fichário: furos à esquerda, abas à direita */
+.furos { position: absolute; left: 38px; top: 0; width: 46px; height: 1080px; box-sizing: border-box; padding: 170px 0; display: flex; flex-direction: column; justify-content: space-between; }
+.furo { width: 46px; height: 46px; border-radius: 50%; background: #2A2723; border: 4px solid #D8CFB9; }
+.abas { position: absolute; left: 1848px; top: 190px; width: 72px; display: flex; flex-direction: column; gap: 12px; }
+.aba { position: relative; width: 72px; height: 132px; border-radius: 12px; opacity: 0.5; transform: translateX(26px); }
+.aba p { position: absolute; left: -30px; top: 46px; width: 132px; height: 40px; transform: rotate(-90deg); text-align: center; font-size: 24px; font-weight: 700; line-height: 40px; color: #1E1B16; }
+.aba.on { opacity: 1; transform: translateX(0px); }
+.agua { background: #8CC7E8; }
+.solo { background: #E3B873; }
+.alim { background: #F2A07B; }
+.maos { background: #B8DF63; }
+.ar { background: #C3CAD6; }
+
+/* Rodapé */
+.rodape { position: absolute; left: 128px; bottom: 64px; width: 1664px; display: flex; justify-content: space-between; align-items: center; }
+.rodape p { font-size: 24px; line-height: 1.2; }
+.folha .rodape p { color: #5F584C; }
+.escuro .rodape p { color: #A9B0BC; }
+.grifo .rodape p { color: #3A3528; }
+.pg { font-size: 24px; font-weight: 700; }
+.pg::before { content: counter(page); }
+.folha .pg { color: #5F584C; }
+.escuro .pg { color: #A9B0BC; }
+.grifo .pg { color: #3A3528; }
+
+/* Capa */
+.capa-texto { width: 940px; flex: 1; display: flex; flex-direction: column; gap: 24px; }
+.capa-sub { width: 820px; }
+.capa-nomes { font-size: 30px; line-height: 1.45; width: 920px; }
+.polaroid { position: absolute; left: 1140px; top: 168px; width: 560px; background: #FFFEFA; padding: 28px 28px 26px; box-shadow: 0 18px 50px rgba(30, 27, 22, 0.22); transform: rotate(4deg); display: flex; flex-direction: column; gap: 16px; }
+.polaroid img { width: 504px; height: 452px; object-fit: cover; }
+.polaroid p { font-family: 'Caveat', 'Brush Script MT', cursive; font-size: 46px; font-weight: 700; line-height: 1.1; color: #27469A; }
+.fita { position: absolute; left: 1330px; top: 140px; width: 190px; height: 54px; background: rgba(255, 224, 102, 0.88); transform: rotate(-4deg); }
+
+/* Marca-texto por cima de uma frase */
+.marca { position: relative; align-self: flex-start; }
+.marca-clip { position: absolute; left: -14px; right: -14px; top: 14px; height: 62px; overflow: hidden; mix-blend-mode: multiply; }
+.marca-tinta { height: 62px; background: #FFE066; }
+
+/* Número grande, círculo de caneta e carimbo */
+.numero { font-family: 'Fraunces', Georgia, serif; font-size: 300px; font-weight: 800; line-height: 0.92; letter-spacing: -8px; }
+.rodeado { position: relative; align-self: flex-start; margin-bottom: 26px; }
+.caneta { position: absolute; left: -44px; top: -24px; width: 900px; height: 362px; }
+.carimbo { position: absolute; left: 170px; top: 782px; width: 430px; border: 8px solid #C8321E; border-radius: 10px; padding: 8px 0; text-align: center; font-size: 54px; font-weight: 800; letter-spacing: 6px; line-height: 1.2; color: #C8321E; opacity: 0.86; transform: rotate(-8deg); }
+
+/* Linhas de fatos */
+.fatos { display: flex; flex-direction: column; }
+.fato { padding: 20px 0; border-top: 2px solid #D8CFB9; }
+.escuro .fato { border-top: 2px solid #2B323D; }
+
+/* Fichas pautadas do método */
+.fichas { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px; padding-top: 60px; align-items: start; }
+.ficha { background: #FFFDF6; border: 2px solid #D8CFB9; box-shadow: 0 10px 30px rgba(30, 27, 22, 0.10); display: flex; flex-direction: column; }
+.ficha-faixa { height: 14px; background: #E0705F; }
+.ficha-dentro { padding: 26px 34px 34px; display: flex; flex-direction: column; gap: 10px; }
+.torta-a { transform: rotate(-1.4deg); }
+.torta-b { transform: rotate(1.1deg); }
+
+/* Lista de linhas (vias, ações) */
+.linhas { flex: 1; display: flex; flex-direction: column; padding-top: 36px; }
+.linha { display: flex; gap: 36px; align-items: center; padding: 22px 0; border-top: 2px solid #D8CFB9; }
+.cor { width: 34px; height: 34px; border-radius: 6px; }
+.linha-nome { width: 230px; font-family: 'Fraunces', Georgia, serif; font-size: 42px; font-weight: 600; line-height: 1.1; }
+.linha-texto { flex: 1; font-size: 36px; line-height: 1.3; font-weight: 500; }
+.linha-nota { width: 560px; font-family: 'Caveat', 'Brush Script MT', cursive; font-size: 52px; font-weight: 700; line-height: 1.05; color: #27469A; }
+
+/* Barras verticais (areia) */
+.grafico { display: flex; gap: 64px; align-items: flex-end; }
+.coluna { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.trilho { height: 400px; width: 230px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 12px; overflow: hidden; border-bottom: 4px solid #1E1B16; }
+.barra { width: 230px; background: #E3B873; border: 4px solid #1E1B16; }
+.valor { font-family: 'Fraunces', Georgia, serif; font-size: 68px; font-weight: 700; line-height: 1; }
+.rotulo { font-size: 30px; line-height: 1.25; text-align: center; font-weight: 500; }
+
+/* Barras horizontais (ar) */
+.faixas { display: flex; flex-direction: column; gap: 34px; }
+.faixa { display: flex; flex-direction: column; gap: 10px; }
+.faixa-topo { display: flex; justify-content: space-between; align-items: baseline; }
+.faixa-nome { font-size: 34px; line-height: 1.25; font-weight: 500; }
+.faixa-valor { font-family: 'Fraunces', Georgia, serif; font-size: 44px; font-weight: 700; line-height: 1; }
+.canal { height: 34px; overflow: hidden; border-bottom: 3px solid #1E1B16; }
+.fio { height: 34px; background: #C8321E; }
+.fio-limite { height: 34px; background: #9AA3B2; }
+
+/* Lista de conferência (merenda, ações) */
+.itens { display: flex; flex-direction: column; }
+.item { display: flex; gap: 28px; align-items: center; padding: 20px 0; border-top: 2px solid #D8CFB9; }
+.item-texto { flex: 1; font-size: 36px; line-height: 1.3; font-weight: 500; }
+.item-valor { font-family: 'Fraunces', Georgia, serif; font-size: 44px; font-weight: 700; line-height: 1; }
+
+/* Mãos sob luz negra */
+.duas-maos { display: flex; gap: 72px; align-items: flex-end; }
+.uma-mao { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.mao-valor { font-family: 'Fraunces', Georgia, serif; font-size: 76px; font-weight: 700; line-height: 1; }
+
+/* Tabela */
+.quadro { font-size: 30px; color: #1E1B16; }
+.quadro th { text-align: left; }
+
+/* Quiz */
+.perguntas { flex: 1; display: flex; flex-direction: column; padding-top: 30px; }
+.pergunta { padding: 20px 0; border-top: 2px solid #D8CFB9; display: flex; flex-direction: column; gap: 6px; }
+.afirma { font-family: 'Fraunces', Georgia, serif; font-size: 44px; font-weight: 500; font-style: italic; line-height: 1.2; }
+.resposta { display: flex; gap: 28px; align-items: baseline; }
+.resposta .veredito { font-family: 'Caveat', 'Brush Script MT', cursive; font-size: 64px; font-weight: 700; line-height: 1; color: #C8321E; }
+.resposta .porque { flex: 1; font-size: 34px; line-height: 1.3; font-weight: 500; }
+
+.refs { flex: 1; display: flex; flex-direction: column; gap: 24px; padding-top: 44px; }
+.refs p { font-size: 27px; line-height: 1.36; width: 1664px; font-weight: 400; }
+
+.frase { font-family: 'Fraunces', Georgia, serif; font-size: 92px; font-weight: 700; line-height: 1.05; letter-spacing: -2px; width: 1500px; }
+.apoio { width: 1250px; }
+.frase.estreita { width: 1060px; }
+.itens h3 { padding-bottom: 16px; }
+.pontos { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.bilhete { position: absolute; left: 1290px; top: 300px; width: 400px; background: #FFE066; padding: 34px 34px 44px; box-shadow: 0 14px 34px rgba(30, 27, 22, 0.18); transform: rotate(3deg); }
+
+/* Movimento: cada slide tem um gesto principal, o resto fica parado.
+   A regra normal é o estado final; a partida fica nos keyframes. */
+@property --n { syntax: '<integer>'; inherits: false; initial-value: 0 }
+@keyframes count { from { --n: 0 } }
+.n { animation: count 1.2s ease-out both }
+
+@keyframes surge { from { opacity: 0; } }
+@keyframes cresce { from { transform: translateY(100%); } }
+@keyframes desliza { from { transform: translateX(-100%); } }
+@keyframes cai { from { opacity: 0; transform: translateY(-70px) rotate(-7deg); } }
+@keyframes distribui { from { opacity: 0; transform: translateY(-60px) rotate(-9deg); } }
+@keyframes bate { from { opacity: 0; transform: rotate(-8deg) scale(2.1); } }
+@keyframes risca { from { opacity: 0; transform: scale(1.9); } }
+
+.surge { animation: surge 0.8s ease-out both; animation-delay: calc(var(--i) * 140ms); }
+.cresce { animation: cresce 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i) * 140ms); }
+.desliza { animation: desliza 0.7s cubic-bezier(0.3, 0.6, 0.2, 1) both; animation-delay: calc(var(--i) * 140ms); }
+.cai { animation: cai 0.6s ease-out both; animation-delay: calc(var(--i) * 140ms); }
+.distribui { animation: distribui 0.5s ease-out both; animation-delay: calc(var(--i) * 140ms); }
+.bate { animation: bate 0.34s ease-in both; animation-delay: calc(var(--i) * 140ms); }
+.risca { animation: risca 0.34s ease-in both; animation-delay: calc(var(--i) * 140ms); }
+
+/* Passos no ritmo de quem apresenta */
+.fragment { opacity: 0; transform: translateY(18px); transition: opacity 0.4s ease-out, transform 0.4s ease-out; }
+.fragment.visible { opacity: 1; transform: translateY(0px); }
